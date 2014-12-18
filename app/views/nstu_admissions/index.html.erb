@@ -1,0 +1,55 @@
+<h1>Listing nstu_admissions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Roll no</th>
+      <th>Name</th>
+      <th>Father name</th>
+      <th>Ssc gpa</th>
+      <th>Hsc gpa</th>
+      <th>Phy</th>
+      <th>Che</th>
+      <th>Math</th>
+      <th>Bio</th>
+      <th>Ban eng</th>
+      <th>Bangla</th>
+      <th>Eng</th>
+      <th>Math</th>
+      <th>Ana abi</th>
+      <th>Gen kno</th>
+      <th>Merit</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nstu_admissions.each do |nstu_admission| %>
+      <tr>
+        <td><%= nstu_admission.roll_no %></td>
+        <td><%= nstu_admission.name %></td>
+        <td><%= nstu_admission.father_name %></td>
+        <td><%= nstu_admission.ssc_gpa %></td>
+        <td><%= nstu_admission.hsc_gpa %></td>
+        <td><%= nstu_admission.phy %></td>
+        <td><%= nstu_admission.che %></td>
+        <td><%= nstu_admission.math %></td>
+        <td><%= nstu_admission.bio %></td>
+        <td><%= nstu_admission.ban_eng %></td>
+        <td><%= nstu_admission.bangla %></td>
+        <td><%= nstu_admission.ENG %></td>
+        <td><%= nstu_admission.math %></td>
+        <td><%= nstu_admission.ana_abi %></td>
+        <td><%= nstu_admission.gen_kno %></td>
+        <td><%= nstu_admission.merit %></td>
+        <td><%= link_to 'Show', nstu_admission %></td>
+        <td><%= link_to 'Edit', edit_nstu_admission_path(nstu_admission) %></td>
+        <td><%= link_to 'Destroy', nstu_admission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nstu admission', new_nstu_admission_path %>

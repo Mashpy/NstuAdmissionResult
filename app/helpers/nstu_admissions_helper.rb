@@ -1,0 +1,2 @@
+module NstuAdmissionsHelper
+end

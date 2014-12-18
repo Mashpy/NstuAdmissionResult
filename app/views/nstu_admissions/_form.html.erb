@@ -1,0 +1,81 @@
+<%= form_for(@nstu_admission) do |f| %>
+  <% if @nstu_admission.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nstu_admission.errors.count, "error") %> prohibited this nstu_admission from being saved:</h2>
+
+      <ul>
+      <% @nstu_admission.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :roll_no %><br>
+    <%= f.text_field :roll_no %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :father_name %><br>
+    <%= f.text_field :father_name %>
+  </div>
+  <div class="field">
+    <%= f.label :ssc_gpa %><br>
+    <%= f.text_field :ssc_gpa %>
+  </div>
+  <div class="field">
+    <%= f.label :hsc_gpa %><br>
+    <%= f.text_field :hsc_gpa %>
+  </div>
+  <div class="field">
+    <%= f.label :phy %><br>
+    <%= f.text_field :phy %>
+  </div>
+  <div class="field">
+    <%= f.label :che %><br>
+    <%= f.text_field :che %>
+  </div>
+  <div class="field">
+    <%= f.label :math %><br>
+    <%= f.text_field :math %>
+  </div>
+  <div class="field">
+    <%= f.label :bio %><br>
+    <%= f.text_field :bio %>
+  </div>
+  <div class="field">
+    <%= f.label :ban_eng %><br>
+    <%= f.text_field :ban_eng %>
+  </div>
+  <div class="field">
+    <%= f.label :bangla %><br>
+    <%= f.text_field :bangla %>
+  </div>
+  <div class="field">
+    <%= f.label :ENG %><br>
+    <%= f.text_field :ENG %>
+  </div>
+  <div class="field">
+    <%= f.label :math %><br>
+    <%= f.text_field :math %>
+  </div>
+  <div class="field">
+    <%= f.label :ana_abi %><br>
+    <%= f.text_field :ana_abi %>
+  </div>
+  <div class="field">
+    <%= f.label :gen_kno %><br>
+    <%= f.text_field :gen_kno %>
+  </div>
+  <div class="field">
+    <%= f.label :merit %><br>
+    <%= f.text_field :merit %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

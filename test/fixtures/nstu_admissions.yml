@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  roll_no: 
+  name: MyString
+  father_name: MyString
+  ssc_gpa: 1.5
+  hsc_gpa: 1.5
+  phy: 1.5
+  che: 1.5
+  math: 1.5
+  bio: 1.5
+  ban_eng: 1.5
+  bangla: 1.5
+  ENG: 1.5
+  math: 1.5
+  ana_abi: 1.5
+  gen_kno: 1.5
+  merit: 1.5
+
+two:
+  roll_no: 
+  name: MyString
+  father_name: MyString
+  ssc_gpa: 1.5
+  hsc_gpa: 1.5
+  phy: 1.5
+  che: 1.5
+  math: 1.5
+  bio: 1.5
+  ban_eng: 1.5
+  bangla: 1.5
+  ENG: 1.5
+  math: 1.5
+  ana_abi: 1.5
+  gen_kno: 1.5
+  merit: 1.5
