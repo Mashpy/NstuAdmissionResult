@@ -3,10 +3,17 @@ class NstuAdmissionsController < ApplicationController
 
   # GET /nstu_admissions
   # GET /nstu_admissions.json
-  def index
-    @nstu_admissions = NstuAdmission.all
+def index  
+  @nstu_admissions = NstuAdmission.all
+  if params[:search].blank?
+    @message="You have not entered anything"
+  else if params[:search]=~/^[0-9]*$/
+     @nstu_admissions = NstuAdmission.search(params[:search])
+    else
+     @notdigit="You have not entered digit"
   end
-
+end
+end
   # GET /nstu_admissions/1
   # GET /nstu_admissions/1.json
   def show
