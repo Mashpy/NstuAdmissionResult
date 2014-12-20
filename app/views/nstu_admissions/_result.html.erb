@@ -1,4 +1,7 @@
 <br/><br/>
+<hr>
+<div style="margin-left:25%" align="left">
+
           <% @nstu_admissions.each do |nstu_admission| %>
 
 <% if nstu_admission.roll_no.blank? %>
@@ -20,7 +23,7 @@
 <% if nstu_admission.father_name.blank? %>
 <% else %>
 <p>
-<strong>Father name: </strong>
+<strong>Father's name: </strong>
 <%= nstu_admission.father_name %>
 </p>
 <% end %>
@@ -124,3 +127,4 @@
 <% end %>
         
   <% end %>
+  </div>

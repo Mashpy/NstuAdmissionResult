@@ -1,5 +1,14 @@
-<% if @notice.blank? %>
-  <p>You have not passed</p>
-  <% else %>
-  <%=@notice %>
+<% if params[:search].to_i.between?(0,10) %>
+<div style="color:red">A unit result is not published yet now</div>
+<% else if params[:search].to_i.between?(11,20)%>
+<div style="color:red">B unit result is not published yet now</div>
+<% else if params[:search].to_i.between?(21,30)%>
+<div style="color:red">C unit result is not published yet now</div>
+<% else if params[:search].to_i.between?(31,40)%>
+<div style="color:red">D unit result is not published yet now</div>
+<% else %>
+<div style="color:red">Sorry. You have not passed. Best of luck.</div>
+<% end %>
+<% end %>
+<% end %>
 <% end %>
