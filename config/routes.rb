@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'seatplans/index'
+  resources :seatplans
   ActiveAdmin.routes(self)
   resources :nstu_admissions
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,27 @@
+<title>Admission Test Seatplan 2014-15</title>
+<div align="center">
+  <br/><br/><br/>
+<h1>Noakhali Science and Technology University</h1>
+  <br/><br/><br/>
+<h2>Admission Test Seatplan 2014-15</h2>
+<%= form_tag seatplans_path, :method => 'get' do %>
+<%= text_field_tag :search, params[:search], class: "span12 search_input", placeholder: "Roll no." %>
+<%= submit_tag "Check", :class=>"btn btn-primary btn-success" ,:title => nil %>
+<% end %>	
+
+<% if params[:search].to_i.between?(1,10) %>
+<div style="color:red">A unit</div>
+<% else if params[:search].to_i.between?(11,20)%>
+<div style="color:red">B unit </div>
+<% else if params[:search].to_i.between?(21,30)%>
+<div style="color:red">C unit </div>
+<% else if params[:search].to_i.between?(31,40)%>
+<div style="color:red">D unit </div>
+<% else %>
+<div style="color:red;margin-left:-5%">Please enter the correct roll no</div>
+<% end %>
+<% end %>
+<% end %>
+<% end %>
+
+</div>  
