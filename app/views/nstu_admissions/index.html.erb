@@ -1,132 +1,19 @@
 <h1>Listing nstu_admissions</h1>
 
 <%= form_tag nstu_admissions_path, :method => 'get' do %>
-<%= text_field_tag :search, params[:search], class: "span12 search_input", placeholder: " Search Jobs Here" %>
-<%= submit_tag "Search", :class=>"btn btn-primary btn-success" ,:title => nil %>
+<%= text_field_tag :search, params[:search], class: "span12 search_input", placeholder: "Roll no." %>
+<%= submit_tag "Check", :class=>"btn btn-primary btn-success" ,:title => nil %>
 <% end %>	
-
-
 
 <% if @message.blank? %>
   
   <% if @notdigit.blank? %>
  
       <% if @nstu_admissions.blank? %>
-You have not passed
+<%= render 'nstu_admissions/unitchecker' %>
      <% else %>
-              <table>
-        <thead>
-          <tr>
-            <th>Roll no</th>
-            <th>Name</th>
-            <th>Father name</th>
-            <th>Ssc gpa</th>
-            <th>Hsc gpa</th>
-            <th>Phy</th>
-            <th>Che</th>
-            <th>Math</th>
-            <th>Bio</th>
-            <th>Ban eng</th>
-            <th>Bangla</th>
-            <th>Eng</th>
-            <th>Math</th>
-            <th>Ana abi</th>
-            <th>Gen kno</th>
-            <th>Merit</th>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @nstu_admissions.each do |nstu_admission| %>
-            
-<p>
-  <strong>Roll no:</strong>
-  <%= @nstu_admission.roll_no %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @nstu_admission.name %>
-</p>
-
-<p>
-  <strong>Father name:</strong>
-  <%= @nstu_admission.father_name %>
-</p>
-
-<p>
-  <strong>Ssc gpa:</strong>
-  <%= @nstu_admission.ssc_gpa %>
-</p>
-
-<p>
-  <strong>Hsc gpa:</strong>
-  <%= @nstu_admission.hsc_gpa %>
-</p>
-
-<p>
-  <strong>Phy:</strong>
-  <%= @nstu_admission.phy %>
-</p>
-
-<p>
-  <strong>Che:</strong>
-  <%= @nstu_admission.che %>
-</p>
-
-<p>
-  <strong>Math:</strong>
-  <%= @nstu_admission.math %>
-</p>
-
-<p>
-  <strong>Bio:</strong>
-  <%= @nstu_admission.bio %>
-</p>
-
-<p>
-  <strong>Ban eng:</strong>
-  <%= @nstu_admission.ban_eng %>
-</p>
-
-<p>
-  <strong>Bangla:</strong>
-  <%= @nstu_admission.bangla %>
-</p>
-
-<p>
-  <strong>Eng:</strong>
-  <%= @nstu_admission.ENG %>
-</p>
-
-<p>
-  <strong>Math:</strong>
-  <%= @nstu_admission.math %>
-</p>
-
-<p>
-  <strong>Ana abi:</strong>
-  <%= @nstu_admission.ana_abi %>
-</p>
-
-<p>
-  <strong>Gen kno:</strong>
-  <%= @nstu_admission.gen_kno %>
-</p>
-
-<p>
-  <strong>Merit:</strong>
-  <%= @nstu_admission.merit %>
-</p>
-            
-          <% end %>
-        </tbody>
-      </table>
-
-      <br>
-        
-  <% end %>
+<%= render 'nstu_admissions/result' %>
+      <% end %>
 
 <% else %>
    <%= @notdigit %>

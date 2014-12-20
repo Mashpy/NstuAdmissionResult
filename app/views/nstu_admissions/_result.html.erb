@@ -1,0 +1,126 @@
+<br/><br/>
+          <% @nstu_admissions.each do |nstu_admission| %>
+
+<% if nstu_admission.roll_no.blank? %>
+<% else %>
+<p>
+<strong>Roll no: </strong>
+<%= nstu_admission.roll_no %>
+</p>
+<% end %>
+
+<% if nstu_admission.name.blank? %>
+<% else %>
+<p>
+<strong>Name: </strong>
+<%= nstu_admission.name %>
+</p>
+<% end %>
+
+<% if nstu_admission.father_name.blank? %>
+<% else %>
+<p>
+<strong>Father name: </strong>
+<%= nstu_admission.father_name %>
+</p>
+<% end %>
+
+<% if nstu_admission.ssc_gpa.blank? %>
+<% else %>
+<p>
+<strong>Ssc gpa: </strong>
+<%= nstu_admission.ssc_gpa %>
+</p>
+<% end %>
+
+<% if nstu_admission.hsc_gpa.blank? %>
+<% else %>
+<p>
+<strong>Hsc gpa: </strong>
+<%= nstu_admission.hsc_gpa %>
+</p>
+<% end %>
+
+<% if nstu_admission.phy.blank? %>
+<% else %>
+<p>
+<strong>Phy: </strong>
+<%= nstu_admission.phy %>
+</p>
+<% end %>
+
+<% if nstu_admission.che.blank? %>
+<% else %>
+<p>
+<strong>Che: </strong>
+<%= nstu_admission.che %>
+</p>
+<% end %>
+
+<% if nstu_admission.math.blank? %>
+<% else %>
+<p>
+<strong>Math: </strong>
+<%= nstu_admission.math %>
+</p>
+<% end %>
+
+<% if nstu_admission.bio.blank? %>
+<% else %>
+<p>
+<strong>Bio: </strong>
+<%= nstu_admission.bio %>
+</p>
+<% end %>
+
+<% if nstu_admission.ban_eng.blank? %>
+<% else %>
+<p>
+<strong>Ban eng: </strong>
+<%= nstu_admission.ban_eng %>
+</p>
+<% end %>
+
+
+<% if nstu_admission.bangla.blank? %>
+<% else %>
+<p>
+<strong>Bangla: </strong>
+<%= nstu_admission.bangla %>
+</p>
+<% end %>
+
+
+<% if nstu_admission.ENG.blank? %>
+<% else %>
+<p>
+<strong>Eng: </strong>
+<%= nstu_admission.ENG %>
+</p>
+<% end %>
+
+<% if nstu_admission.ana_abi.blank? %>
+<% else %>
+<p>
+<strong>Ana abi: </strong>
+<%= nstu_admission.ana_abi %>
+</p>
+<% end %>
+
+<% if nstu_admission.gen_kno.blank? %>
+<% else %>
+<p>
+<strong>Gen kno: </strong>
+<%= nstu_admission.gen_kno %>
+</p>
+<% end %>
+
+<% if nstu_admission.merit.blank? %>
+<% else %>
+<p>
+<strong>Merit: </strong>
+<%= nstu_admission.merit %>
+</p>
+<% end %>
+        
+  <% end %>

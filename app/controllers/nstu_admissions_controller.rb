@@ -6,7 +6,7 @@ class NstuAdmissionsController < ApplicationController
 def index  
   @nstu_admissions = NstuAdmission.all
   if params[:search].blank?
-    @message="You have not entered anything"
+    @message="Please enter your roll no"
   else if params[:search]=~/^[0-9]*$/
      @nstu_admissions = NstuAdmission.search(params[:search])
     else
